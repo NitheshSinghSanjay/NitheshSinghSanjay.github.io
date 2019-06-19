@@ -26,8 +26,8 @@
 
     <!-- favicons
     ================================================== -->
-    
-    
+
+
 
 </head>
 
@@ -39,7 +39,7 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                
+
             </a>
         </div> <!-- end header-logo -->
 
@@ -75,7 +75,7 @@
     ================================================== -->
     <section id="home" class="s-home target-section">
 
-        
+
         <div class="video-header wrap">
             <div class="fullscreen-video-wrap">
                 <video src="images/processed_sequence01.mp4" muted autoplay loop></video>
@@ -95,7 +95,7 @@
                 <p style="color: rgba(255, 255, 255, 0.5);">Nithesh Singh Sanjay (M.S. in Computer Science, CSUSM) and Advisor: Dr. Ali Ahmadinia (Department of Computer Science, CSUSM)</p>
             </div> <!-- end home-content__main -->
 
-            
+
             <ul class="home-sidelinks">
                 <li><a class="smoothscroll" href="#about">About<span>MobileNet-Tiny</span></a></li>
                 <li><a class="smoothscroll" href="#contribution">Contribution<span>Results</span></a></li>
@@ -141,7 +141,7 @@
             <div class="col-full">
                 <p class="lead">
                     Using the SSD-Lite and MobileNetV2
-                     as a starting point, MobileNet-Tiny is an attempt to get a real time object 
+                     as a starting point, MobileNet-Tiny is an attempt to get a real time object
                      detection algorithm on non-GPU
                     computers and edge device such as Raspberry Pi. Since Raspberry Pi by itself
                     does not have enought computing capabilites, it requires more powerful base station
@@ -155,15 +155,15 @@
             <div class="col-full">
                 <img src="images/mobtiny_fig.PNG" alt="">
                 <p class="lead">
-                        MobileNet-Tiny network takes an RGB image of size 224 X 224 X 3 as an 
-                        input and is passed through the convolution layers and Bottleneck Residual Blocks(BRB) 
+                        MobileNet-Tiny network takes an RGB image of size 224 X 224 X 3 as an
+                        input and is passed through the convolution layers and Bottleneck Residual Blocks(BRB)
                         to produce 7 X 7 X 320 feature map. This feature map along with other
                         feature maps form BRB4, BRB5, BRB6 are then passed through SSDLite predictor layers
-                        to produce detections. These detections are filtered by a Non-Maximum Suppression layer
-                        to produce final detections and bounding boxes.
+                        to produce detections. These detections arefiltered by a Non-Maximum Suppression layer
+                        to producefinal detections and bounding boxes.
                 </p>
             </div>
-        </div> <!-- end about-desc -->    
+        </div> <!-- end about-desc -->
 
     </section> <!-- end s-about -->
 
@@ -175,14 +175,15 @@
                 <div class="col-full">
                     <h1 class="display-1">Contribution</h1>
                 </div>
-    
+
                 <div class="col-full">
                     <p class="lead">
                             MobileNet-Tiny demonstrates the power of small articial neural networks with fast
-                            non-GPU object detection capabilities. <br>It suggests that since batch normalization 
-                            in small neural networks increases the total number of parameters and the total number 
-                            of computations required and contribute very less in achieving high accuracy,
-                            not implementing batch normalization in small networks can drastically
+                            non-GPU object detection capabilities. <br>It suggests that since batch normalization (BN)
+                            in small neural networks increases the total number of parameters and the total number
+                            of computations required and contribute very less in achieving high accuracy.
+                            So instead of performing batch normalization after convolution operation, Batch normalization layer
+                            can be merged with the convolution layer to form a single layer which can drastically
                             increase the overall speed of the network without signicant loss of accuracy. <br>
                             It also suggests that carefully optimizing the number of predictor layers and
                             aspect ratios for anchor boxes in SSD for small networks can result in
@@ -190,22 +191,22 @@
                     </p>
                 </div>
             </div>
-    
+
             <div class="row">
-    
+
                 <div class="about-process process block-1-2 block-tab-full">
-    
+
                     <div class="process__vline-left"></div>
                     <div class="process__vline-right"></div>
-    
+
                     <div class="col-block process__col" data-item="1">
                         <div class="process__text">
                             <h4>Results on non-GPU computer</h4>
-    
+
                             <p>
-                                MobileNet-Tiny can achieve 19.4 FPS on a Dell XPS 13. This is 3x faster than 
-                                the original MobileNetV2. Our mean average precision is 52.1% on VOC 07+12 dataset 
-                                and 19% on COCO dataset. You can read more about our project here and find our 
+                                MobileNet-Tiny can achieve 19.4 FPS on a Dell XPS 13. This is 3x faster than
+                                the original MobileNetV2. Our mean average precision is 52.1% on VOC 07+12 dataset
+                                and 19% on COCO dataset. You can read more about our project here and find our
                                 code here.
                             </p>
                         </div>
@@ -213,16 +214,16 @@
                     <div class="col-block process__col" data-item="2">
                         <div class="process__text">
                             <h4>Results on Raspberry Pi</h4>
-    
+
                             <p>
-                                MobileNet-Tiny can achieve 4.5 FPS on Raspberry Pi. This is 7x faster than 
-                                the original MobileNetV2 running on this device. Our mean average precision is 52.1% on 
+                                MobileNet-Tiny can achieve 4.5 FPS on Raspberry Pi. This is 7x faster than
+                                the original MobileNetV2 running on this device. Our mean average precision is 52.1% on
                                 VOC 07+12 dataset and 19% on COCO dataset.
                             </p>
                         </div>
                     </div>
                 </div> <!-- end process -->
-    
+
             </div> <!-- end about-stats -->
     </section>
 
@@ -429,7 +430,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    
+
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
